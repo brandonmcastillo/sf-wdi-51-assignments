@@ -9,9 +9,9 @@
 //require express in our app
 const express = require('express'),
     bodyParser = require('body-parser');
-
+const db = require('./models');
 // generate a new express app and call it 'app'
-var app = express();
+const app = express();
 
 // serve static files in public
 app.use(express.static('public'));
@@ -19,49 +19,12 @@ app.use(express.static('public'));
 // body parser config to accept our datatypes
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
-
-////////////////////
-//  DATA
-///////////////////
-
-var books = [{
-        _id: 15,
-        title: "The Four Hour Workweek",
-        author: "Tim Ferriss",
-        image: "https://s3-us-west-2.amazonaws.com/sandboxapi/four_hour_work_week.jpg",
-        release_date: "April 1, 2007"
-    },
-    {
-        _id: 16,
-        title: "Of Mice and Men",
-        author: "John Steinbeck",
-        image: "https://s3-us-west-2.amazonaws.com/sandboxapi/of_mice_and_men.jpg",
-        release_date: "Unknown 1937"
-    },
-    {
-        _id: 17,
-        title: "Romeo and Juliet",
-        author: "William Shakespeare",
-        image: "https://s3-us-west-2.amazonaws.com/sandboxapi/romeo_and_juliet.jpg",
-        release_date: "Unknown 1597"
-    }
-];
-
-
-var newBookUUID = 18;
-
-
-
-
-
+// var newBookUUID = 18;
 
 
 ////////////////////
 //  ROUTES
 ///////////////////
-
-
 
 
 // define a root route: localhost:3000/
@@ -70,10 +33,15 @@ app.get('/', function(req, res) {
 });
 
 // get all books
-app.get('/api/books', function(req, res) {
-    // send all books as JSON response
-    console.log('books index');
-    res.json(books);
+app.get('/api/books', (req, res) => {
+    db.Book.find((err, foundBooks) => {
+        if (err) {
+            console.log('Index Error: ${err}');
+            res.sendStatus(500);
+
+        }
+    });
+
 });
 
 // get one book
