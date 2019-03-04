@@ -5,6 +5,7 @@ import imageFour from "./gallery_4.jpg";
 import imageTwo from "./gallery_2.jpg";
 import imageFive from "./gallery_5.jpg";
 import imageSix from "./gallery_6.jpg";
+
 class Gallery extends Component {
     render() {
         return (

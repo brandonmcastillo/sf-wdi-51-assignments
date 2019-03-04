@@ -3,6 +3,14 @@ img {
 	max-width: 100%;
 }
 
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 15px;
+}
+
 /* ----------------------------------------
 Typography
 ------------------------------------------- */
@@ -61,7 +69,34 @@ li {
 	text-align: left;
 }
 
+/* Navbar */
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
+	z-index: 100;
+}
 
+nav li {
+	display: inline-block;
+}
+
+nav a {
+	font-weight: 600;
+	letter-spacing: 0.75px;
+	letter-spacing: .05rem;
+	padding: 3px 60px;
+	padding: .2rem 4rem;
+	display: inline-block;
+	border-bottom: none;
+	text-transform: uppercase;
+}
+
+.hamburger {
+	display: none;
+}
 
 /* ----------------------------------------
 Layout
@@ -209,4 +244,121 @@ Gallery
 	.masonry {
 		column-count: 2;
 	}
+}
+
+form {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+form button {
+	width: 100%;
+}
+
+textarea {
+	width: 100%;
+	display: block;
+}
+
+input, textarea {
+	border: 2px solid #44545E;
+	margin-bottom: 12px;
+	margin-bottom: .8rem;
+	padding: 10px 10px;
+	outline: 0;
+}
+
+::-webkit-input-placeholder {
+   color: #7C878E;
+   text-transform: uppercase;
+   letter-spacing: 0.75px;
+   letter-spacing: .05rem;
+   font-size: 12.299px;
+   font-size: .82rem;
+   font-weight: 600;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #7C878E;
+   text-transform: uppercase;
+   letter-spacing: 0.75px;
+   letter-spacing: .05rem;
+   font-size: 12.299px;
+   font-size: .82rem;
+   font-weight: 600;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #7C878E;
+   text-transform: uppercase;
+   letter-spacing: 0.75px;
+   letter-spacing: .05rem;
+   font-size: 12.299px;
+   font-size: .82rem;
+   font-weight: 600;
+}
+
+:-ms-input-placeholder {  
+   color: #7C878E;
+   text-transform: uppercase;
+   letter-spacing: 0.75px;
+   letter-spacing: .05rem;
+   font-size: 12.299px;
+   font-size: .82rem;
+   font-weight: 600; 
+}
+/* ----------------------------------------
+Footer
+------------------------------------------- */
+footer {
+	background-color: #CDF3F6;
+	overflow: auto;
+}
+
+footer input {
+	padding: 11px 10px;
+	width: 300px;
+	margin-right: 30px;
+	margin-right: 2rem;
+	border: 0;
+	text-align: center;
+}
+
+footer .wrap {
+	/* padding: 30px 15px; */
+	/* padding: 2rem 1rem; */
+}
+
+.social-links {
+	font-size: 30px;
+	font-size: 2rem;
+	padding-top: 1px;
+	
+	display: inline-block;
+	color: #44545E;
+}
+
+.twitter{
+	padding:.2em;
+	margin: 1em;
+}
+
+.copyright {
+	border-top: 2px solid #44545E;
+	padding: 15px 0 3px;
+	padding: 1rem 0 .2rem;
+}
+
+.footerdiv {
+	padding-top: 1em;
 }
