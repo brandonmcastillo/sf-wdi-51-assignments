@@ -1,0 +1,46 @@
+
+/* ----------------------------------------
+Header
+------------------------------------------- */
+header {
+	padding-top: 30px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h1 a,
+h1 a:hover,
+header h2 {
+	color: #fff;
+}
+
+header h2 {
+	font-size: 20.8px;
+	font-size: 1.3rem;
+	letter-spacing: 4.8px;
+	letter-spacing: 0.3rem;
+}
+
+.vertical-center1 {
+    background-image: url('./blog_header_bg.jpg');
+    background-size: cover;
+	background-position: center;
+    background-repeat: no-repeat;
+/* 	padding-top: 6rem;
+	padding-bottom: 2.5rem; */
+
+	/* If there is a background-image */
+	height: 350px;
+	margin-bottom: 48px;
+	margin-bottom: 3rem;
+}
+
+h1 a {
+	color: #44545E;
+
+	/* If background-image */
+	color: white;
+	margin-top: 40px;
+	margin-top: 2.5rem;
+	display: inline-block;
+}

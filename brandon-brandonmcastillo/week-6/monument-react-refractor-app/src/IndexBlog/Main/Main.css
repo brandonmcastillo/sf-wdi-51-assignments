@@ -1,0 +1,11 @@
+.grid-wrapper section {
+	width: 70%;
+	text-align: left;
+	padding-top: 0;
+	padding-bottom: 54.4px;
+	padding-bottom: 3.4rem;
+}
+
+.comment {
+	padding-top: 0;
+}
