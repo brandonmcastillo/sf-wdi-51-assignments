@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <form method="POST" action="" novalidate>
+    {{ form.hidden_tag() }}
+
+    <div class="field">
+      {{ form.name.label }}
+      {{ form.name(class="input") }}
+    </div>
+    <div class="field">
+      {{ form.description.label }}
+      {{ form.description(class="textarea") }}
+    </div>
+
+    {{ form.submit(class="button") }}
+  </form>
+{% endblock %}
