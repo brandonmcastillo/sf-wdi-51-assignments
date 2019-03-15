@@ -10,6 +10,7 @@ PORT = 8000
 
 app = Flask(__name__)
 app.secret_key = 'adkjfalj.adflja.dfnasdf.asd'
+
 # Connect Database before Request
 @app.before_request
 def before_request():

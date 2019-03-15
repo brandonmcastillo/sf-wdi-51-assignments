@@ -17,7 +17,6 @@
 <article class="message is-primary">
     <div class="message-header">
         <a href={{url_for('posts', id=post.id)}}>{{post.title}}</a>
-
         <p>By: {{post.user}}</p>
     </div>
     <div class="message-body">
@@ -27,7 +26,6 @@
 </article>
     {% endfor %}
 {% endif %}
-
 
 <section>
     <h2>New Post Form</h2>
@@ -50,6 +48,5 @@
 
         {{ form.submit(class_="button") }}
     </form>
-
 </section>
 {% endblock %}

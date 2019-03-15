@@ -13,10 +13,9 @@
     <a>r/{{post.sub}}</a>
 </article>
 
-
 {% if comments %}
 <h1>Comment List</h1>
-{% for comment in comments %}
+    {% for comment in comments %}
 <article class="message is-primary">
     <div class="message-header">
         <a href={{url_for('comments', id=comment.id)}}>{{comment.title}}</a>
@@ -29,13 +28,11 @@
     {% endfor %}
 {% endif %}
 
-
 <section>
     <h2>New Comment Form</h2>
     <form method='POST' action="" novalidate>
         {{ form.hidden_tag()}}
         <!-- Hidden tag provides CSRF (Cross site request forgery) -->
-        
         <div>
             {{ form.title.label }}
             {{ form.title(class_="input") }}
@@ -46,6 +43,5 @@
         </div>
         {{ form.submit(class_="button") }}
     </form>
-
 </section>
 {% endblock %}
